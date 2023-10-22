@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <link rel="stylesheet" href="/assets/style/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecco | ações</title>
+        <link rel="shortcut icon" href="/assets/img/image-removebg-preview.png" type="image/x-icon">
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="containerSidebar">
+                <a href="/index.html">Início</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/impactos.html">Impactos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/acoes.html">Ações</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/recursos.html">Recursos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/social.html">Social</a>
+            </div>
+        </div>
+        <header>
+            <h1 onclick="window.location.href = '/index.html' ">Ecco<a>.</a></h1>
+            <nav>
+                <a href="/index.html">Início</a>
+                <a href="/impactos.html">Impactos</a>
+                <a href="/acoes.html">Ações</a>
+                <a href="/recursos.html">Recursos</a>
+                <a href="/social.html">Social</a>
+            </nav>
+            <input type="text" placeholder="Pesquisar...">
+            <button id="btnMenu" class="open-btn" onclick="toggleSidebar()">☰</button>
+        </header>
+        <section class="aboutAcoesPage">
+            <div class="divAboutCalculator">
+               <h1>Calculadora de pegada de <a>carbono</a>.</h1>
+               <p>Uma calculadora de pegada de carbono é uma ferramenta que estima a quantidade de gases de efeito estufa emitidos por atividades humanas. Ajuda indivíduos e organizações a entender seu impacto ambiental e a adotar medidas para reduzir as emissões, combatendo as mudanças climáticas.</p>
+            </div>
+            <div class="calculator">
+                <input type="number" id="electricity" placeholder="Consumo de eletricidade (kWh por mês)">
+                <br>
+                <input type="number" id="car" placeholder="Km percorridos de carro por mês">
+                <br>
+                <input type="number" id="meat" placeholder="Consumo de carne por semana (kg)">
+                <br>
+                <input type="number" id="publicTransport" placeholder="Uso de transporte público por semana (em horas)">
+                <br>
+                <div id="result"></div>
+                <button onclick="calculateCarbonFootprint()">Calcular</button>
+            </div>
+            <details class="sobreCalculator">
+                <summary>Sobre a calculadora</summary>
+                <p> ferramenta que estima e ajuda a reduzir emissões de gases de efeito estufa, combatendo as mudanças climáticas.</p>
+            </details>
+        </section>
+        <section class="aboutAcoesPageCalculatorAmbiental">
+            <div class="calculatorAmbiental">
+                <input type="number" id="aguaInput" placeholder="Uso de Água (em litros)">
+                <br>
+                <input type="number" id="lixoInput" placeholder="Produção de Lixo (em quilos)">
+                <br>
+                <input type="number" id="energiaInput" placeholder="Consumo de Energia (em kWh)">
+                <br>
+                <p id="resultado"></p>
+                <button onclick="calcular()">Calcular</button>
+            </div>
+            <details class="sobreCalculatorAmbiental">
+                <summary>Sobre a calculadora ambiental</summary>
+                <p>É uma ferramenta que permite que avaliem seu impacto ambiental pessoal com atividades diárias, como o consumo de água, produção de lixo e consumo de energia.</p>
+            </details>
+            <div class="divAboutCalculatorAmbiental">
+                <h1>Calculadora <a>Ambiental</a>: O que é e por que é importante?</h1>
+                <p>É uma ferramenta que permite que avaliem seu impacto ambiental pessoal com atividades diárias, como o consumo de água, produção de lixo e consumo de energia. A ideia é conscientizar as pessoas sobre como suas escolhas e comportamentos cotidianos podem afetar o meio ambiente. Elas ajudam a entenderem melhor seu próprio impacto e a adotarem medidas para reduzi-lo.</p>
+            </div>
+        </section>
+        <footer class="secondFooter">
+            <p>&copy; 2023 Ecco. Todos os direitos reservados. Desenvolvido por Victor Henrique, Matheus Mendoza, Arthur Pecegueiro e Felipe Zimmermann.</p>
+        </footer>
+        <script src="./assets/script/script.js"></script>
+    </body>
+</html>

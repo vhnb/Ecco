@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <link rel="stylesheet" href="/assets/style/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecco</title>
+        <link rel="shortcut icon" href="/assets/img/image-removebg-preview.png" type="image/x-icon">
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="containerSidebar">
+                <a href="/index.html">Início</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/impactos.html">Impactos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/acoes.html">Ações</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/recursos.html">Recursos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/social.html">Social</a>
+            </div>
+        </div>
+        <header>
+            <h1 onclick="window.location.href = '/index.html' ">Ecco<a>.</a></h1>
+            <nav>
+                <a href="/index.html">Início</a>
+                <a href="/impactos.html">Impactos</a>
+                <a href="/acoes.html">Ações</a>
+                <a href="/recursos.html">Recursos</a>
+                <a href="/social.html">Social</a>
+            </nav>
+            <input type="text" placeholder="Pesquisar...">
+            <button id="btnMenu" class="open-btn" onclick="toggleSidebar()">☰</button>
+        </header>
+        <main>
+            <img src="/assets/img/background.png">
+            <div class="divText">
+                <h1>Juntos pela Natureza, com <span class="autoEscrever"></span></h1>
+                <p class="textoPresent">A Ecco é dedicada à preservação ambiental através da tecnologia. Junte-se a nós para um futuro sustentável, onde natureza e inovação trabalham juntas.</p>
+            </div>
+        </main>
+        <section class="aboutHome">
+            <div class="containerHome animation3">
+                <i class="fa-solid fa-microchip"></i>
+                <h1>Tecnologia</h1>
+                <p>Descubra inovações para proteger o planeta e impulsionar um futuro sustentável.</p>
+            </div>
+            <div class="containerHome animation4">
+                <i class="fa-solid fa-leaf"></i>
+                <h1>Preservação</h1>
+                <p>Explore nossos esforços para preservar ecossistemas e biodiversidade.</p>
+            </div>
+            <div class="containerHome animation3">
+                <i class="fa-solid fa-user"></i>
+                <h1>Junte-se a Nós</h1>
+                <p>Participe de nossa comunidade comprometida com um mundo mais verde.</p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2023 Ecco. Todos os direitos reservados. Desenvolvido por Victor Henrique, Matheus Mendoza, Arthur Pecegueiro e Felipe Zimmermann.</p>
+        </footer>
+        <script src="./assets/script/script.js"></script>
+
+        <!--script para o typed-->
+        <script>
+            const typed = new Typed('.autoEscrever', {
+            strings: ['Tecnologia.', 'Conservação.','Inovação.'],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true,
+        });
+        </script>
+        <!--script para o typed-->
+
+    </body>
+</html>
