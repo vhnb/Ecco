@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <link rel="stylesheet" href="/assets/style/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecco | recursos</title>
+        <link rel="shortcut icon" href="/assets/img/image-removebg-preview.png" type="image/x-icon">
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="containerSidebar">
+                <a href="/index.html">Início</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/impactos.html">Impactos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/acoes.html">Ações</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/recursos.html">Recursos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/social.html">Social</a>
+            </div>
+        </div>
+        <header>
+            <h1 onclick="window.location.href = '/index.html' ">Ecco<a>.</a></h1>
+            <nav>
+                <a href="/index.html">Início</a>
+                <a href="/impactos.html">Impactos</a>
+                <a href="/acoes.html">Ações</a>
+                <a href="/recursos.html">Recursos</a>
+                <a href="/social.html">Social</a>
+            </nav>
+            <input onkeyup="inputRecursos()" id="inputRecursos" type="text" placeholder="Pesquisar...">
+            <button id="btnMenu" class="open-btn" onclick="toggleSidebar()">☰</button>
+        </header>
+        <section class="aboutRecursosPage">
+            <h1>Nossa biblioteca de <a>tecnologias</a>.</h1>
+            <p>Confira alguma das tecnologias que estão sendo utilizados de maneiras inovadoras para ajudar a preservar nosso meio ambiente.</p>
+            <a class="btnRecursos" href="#recursosContent">Confira</a>
+            <img src="/assets/img/image1.png">
+        </section>
+        <section id="recursosContent" class="recursosContent">
+            <div class="recursosCards animation1">
+                <img src="/assets/img/agricultura de precisao.jpg">
+                <div class="recursosCardsContent">
+                    <h1 class="animation5">Agricultura de precisão</h1>
+                    <p class="animation6">Tecnologias como drones, sensores e análises de dados estão sendo utilizadas na agricultura para otimizar o uso de recursos como água e fertilizantes, reduzindo o desperdício e minimizando os impactos ambientais.</p>
+                    <a class="animation7" href="">Saiba mais</a>
+                </div>
+            </div>
+            <div class="recursosCards animation2">
+                <div class="recursosCardsContent">
+                    <h1 class="animation8">Reciclagem Avançada</h1>
+                    <p class="animation9">Novas tecnologias estão sendo desenvolvidas para melhorar os processos de reciclagem, fazendo a reutilização de plásticos, metais e papel, reduzindo a quantidade de resíduos enviados para aterros sanitários.</p>
+                    <a class="animation10" href="">Saiba mais</a>
+                </div>
+                <img src="/assets/img/reciclagem avançada.png">
+            </div>
+            <div class="recursosCards animation1">
+                <img src="/assets/img/energia renovaveis.jpg">
+                <div class="recursosCardsContent">
+                    <h1 class="animation5">Energias Renováveis</h1>
+                    <p class="animation6">Tecnologias como painéis solares, turbinas eólicas e hidrelétricas estão sendo usadas para gerar energia limpa, reduzindo os combustíveis fósseis e diminuindo as emissões de gases de efeito estufa.</p>
+                    <a class="animation7" href="">Saiba mais</a>
+                </div>
+            </div>
+            <div class="recursosCards animation2">
+                <div class="recursosCardsContent">
+                    <h1 class="animation8">Armazenamento de Carbono</h1>
+                    <p class="animation9">Essa tecnologia envolve a captura de dióxido de carbono (CO2) emitido por instalações industriais e sua posterior armazenagem subterrânea para evitar que o CO2 seja liberado na atmosfera.</p>
+                    <a class="animation10" href="" target="_blank">Saiba mais</a>
+                </div>
+                <img src="/assets/img/armazenamento de carbono.jpg">
+            </div>
+            <div class="recursosCards animation1">
+                <img src="/assets/img/iot para monitoramento.jpg">
+                <div class="recursosCardsContent">
+                    <h1 class="animation5">IoT para ambiental</h1>
+                    <p class="animation6">São usados a qualidade do ar, a poluição da água e outros indicadores ambientais. Esses dados ajudam os pesquisadores a tomar decisões para proteger o meio ambiente.</p>
+                    <a class="animation7" href="">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+        <footer class="secondFooter">
+            <p>&copy; 2023 Ecco. Todos os direitos reservados. Desenvolvido por Victor Henrique, Matheus Mendoza, Arthur Pecegueiro e Felipe Zimmermann.</p>
+        </footer>
+        <script src="./assets/script/script.js"></script>
+    </body>
+</html>
