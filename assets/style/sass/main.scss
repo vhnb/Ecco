@@ -1,0 +1,1029 @@
+@import "variables";
+@import "fonts";
+@import "mixin";
+@import "global";
+
+
+/* menu */
+
+.sidebar {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #4a6e37;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    color: white;
+
+    .containerSidebar{
+        @include flex(column);
+        border-bottom: 1px solid rgb(48, 48, 48);
+        padding: 15px;
+
+        a{
+            color: white;
+        }
+
+    }
+
+}
+
+.open-btn {
+    background-color: transparent;
+    font-size: 3vh;
+    margin: 4.5vw;
+    font-weight: 600;
+}
+
+/* menu */
+
+
+/* header */
+header{
+    @include flex(row);
+    justify-content: space-between;
+    height: 12%;
+    width: 100%;
+    position: fixed;
+    background-color: $cor-fundo;
+    z-index: 4;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+    h1{
+        margin-left: 8%;
+
+        cursor: pointer;
+
+        a{
+            color:$cor-principal;
+        }
+    }
+
+    nav{
+        @include flex(row);
+        width: 33%;
+
+        a{
+            font-size: 2.2vh;
+            font-weight: 500;
+            margin:  3%;
+
+            &:hover{
+                color: $cor-principal;
+            }
+
+        }
+
+    }
+
+    input{
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 2rem;
+        width: 15%;
+        margin-right: 8%;
+        height: 40%;
+
+        &:focus{
+            border: 1px solid $cor-principal;
+        }
+
+    }
+
+    button{
+        display: none;
+    }
+
+}
+/* header */
+
+
+/* main */
+main {
+    @include flex(row);
+    height: 100%;
+    width: 100%;
+    background: url("data:image/svg+xml, <svg id='wave' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 490' version='1.1'><defs><linearGradient id='sw-gradient-0' x1='0' x2='0' y1='1' y2='0'><stop stop-color='rgba(108, 162, 79, 1)' offset='0%'></stop><stop stop-color='rgba(108, 162, 79, 1)' offset='100%'></stop></linearGradient></defs><path fill='url(%23sw-gradient-0)' d='M0,392L60,375.7C120,359,240,327,360,326.7C480,327,600,359,720,351.2C840,343,960,294,1080,245C1200,196,1320,147,1440,171.5C1560,196,1680,294,1800,343C1920,392,2040,392,2160,383.8C2280,376,2400,359,2520,334.8C2640,310,2760,278,2880,220.5C3000,163,3120,82,3240,114.3C3360,147,3480,294,3600,367.5C3720,441,3840,441,3960,424.7C4080,408,4200,376,4320,302.2C4440,229,4560,114,4680,114.3C4800,114,4920,229,5040,228.7C5160,229,5280,114,5400,114.3C5520,114,5640,229,5760,261.3C5880,294,6000,245,6120,204.2C6240,163,6360,131,6480,163.3C6600,196,6720,294,6840,343C6960,392,7080,392,7200,351.2C7320,310,7440,229,7560,179.7C7680,131,7800,114,7920,138.8C8040,163,8160,229,8280,245C8400,261,8520,229,8580,212.3L8640,196L8640,490L8580,490C8520,490,8400,490,8280,490C8160,490,8040,490,7920,490C7800,490,7680,490,7560,490C7440,490,7320,490,7200,490C7080,490,6960,490,6840,490C6720,490,6600,490,6480,490C6360,490,6240,490,6120,490C6000,490,5880,490,5760,490C5640,490,5520,490,5400,490C5280,490,5160,490,5040,490C4920,490,4800,490,4680,490C4560,490,4440,490,4320,490C4200,490,4080,490,3960,490C3840,490,3720,490,3600,490C3480,490,3360,490,3240,490C3120,490,3000,490,2880,490C2760,490,2640,490,2520,490C2400,490,2280,490,2160,490C2040,490,1920,490,1800,490C1680,490,1560,490,1440,490C1320,490,1200,490,1080,490C960,490,840,490,720,490C600,490,480,490,360,490C240,490,120,490,60,490L0,490Z'></path></svg>");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .divText{
+        @include flex(column);
+        text-align: start;
+        width: 35%;
+        height: 40%;
+
+        h1{
+            font-size: 5vh;
+            span{
+                color: $cor-principal;
+            }
+        }
+
+        p{
+            font-size: 2.5vh;
+            font-weight: 500;
+            font-weight: 500;
+        }
+
+    }
+
+}
+/* main */
+
+/* about home */
+.aboutHome{
+    @include flex(row);
+    align-items: start;
+    min-height: 40%;
+    width: 100%;
+    background-color: rgba(108, 162, 79, 1);
+
+    .containerHome{
+        @include flex(column);
+        border-radius: 5px;
+        width: 26%;
+        height: 35vh;
+        margin: 1%;
+        background-color: #446433;
+
+        &:hover{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.288);
+            
+            i{
+                color: white;
+            }
+
+            h1{
+                color: white;
+            }
+
+            p{
+                color: white;
+            }
+
+        }
+
+        i{
+            font-size: 5vh;
+            margin-bottom: 3%;
+            color: rgb(201, 201, 201);
+        }
+
+        h1{
+            text-align: center;
+            width: 90%;
+            color: rgb(201, 201, 201);
+        }
+
+        p{
+            text-align: center;
+            width: 85%;
+            color: rgb(201, 201, 201);
+        }
+
+    }
+
+}
+/* about home */
+
+/* about recursos */
+.aboutRecursosPage{
+    @include flex(column);
+    height: 100%;
+    width: 100%;
+
+    h1{
+        margin-top: 5%;
+        font-size: 4vh;
+    }
+
+    a{
+        color: $cor-principal;
+    }
+
+    p{
+        width: 30%;
+        font-size: 2.2vh;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .btnRecursos{
+        @include flex(column);
+        background-color: transparent;
+        border: 2px solid $cor-principal;
+        padding: 10px;
+        margin: 1%;
+        width: 10%;
+        border-radius: 8px;
+        color: $cor-principal;
+        transition: 0.2s;
+
+        &:hover{
+            background-color: $cor-principal;
+            transition: 0.2s;
+            color: white;
+        }
+
+    }
+
+    img{
+        height: auto;
+        width: 33%;
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.20));
+    }
+
+}
+
+.recursosContent{
+    @include flex(column);
+    min-height: 100%;
+    width: 100%;
+    padding: 5vh 0;
+    gap: 5vh;
+
+    .recursosCards{
+        @include flex(row);
+        border-radius: 5px;
+        width: 70%;
+        height: 55vh;
+        margin: 1%;
+        background-color: rgb(243, 243, 243);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+
+        img{
+            border-radius: 8px;
+            margin: 3%;
+            filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
+        }
+
+        .recursosCardsContent{
+            margin: 3%;
+            width: 90%;
+
+            h1{
+                color: $cor-texto;
+                margin-bottom: 3%;
+            }
+
+            p{
+                margin-bottom: 6%;
+            }
+
+            a{
+                background-color: transparent;
+                border: 2px solid $cor-principal;
+                padding: 10px;
+                border-radius: 8px;
+                color: $cor-principal;
+
+                &:hover{
+                    background-color: $cor-principal;
+                    color: $cor-fundo;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/* about recursos */
+
+/* about social */
+
+.socialPage{
+    @include flex(row);
+    height: 100%;
+    width: 100%;
+
+    img{
+        height: auto;
+        width: 33%;
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
+    }
+
+    .socialContent{
+        width: 40%;
+
+        h1{
+            font-size: 5vh;
+            margin-bottom: 2%;
+
+            a{
+                color: $cor-principal;
+            }
+
+        }
+
+        p{
+            font-size: 2.5vh;
+            font-weight: 500;
+            margin-bottom: 1%;
+
+            a{
+                color: $cor-principal;
+            }
+
+        }
+
+        .linkSocial{
+            color: $cor-principal;
+            text-decoration: underline;
+        }
+
+    }
+
+}
+
+.contribuirSocial{
+    @include flex(column);
+    min-height: 70%;
+    width: 100%;
+
+    .containerContribuirSocial{        
+        @include flex(row);
+        width: 80%; 
+        margin-bottom: 2%;
+        padding: 1.5vh;
+        background-color: $cor-principal;
+        border-radius: 8px;
+        overflow: hidden;
+
+        img{
+            border-radius: 100%;
+            width: 20%;
+            margin-left: 1%;
+        }
+
+        .contentContainerContribuirSocial{
+            background-color: $cor-fundo;
+            border-radius: 8px;
+            padding: 8vh;
+            width: 100%;
+
+            h1{
+                font-size: 3.5vh;
+                margin-bottom: 1%;
+            }
+
+            p{
+                font-size: 2.5vh;
+                margin-bottom: 2%;
+            }
+
+            button{
+                border: 1px solid $cor-principal;
+                background-color: transparent;
+                font-size: 2vh;
+                padding: 8px;
+                color: $cor-principal;
+                border-radius: 8px;
+                width: 100%;
+
+                &:hover{
+                    background-color: $cor-principal;
+                    color: $cor-fundo;
+                    cursor: pointer;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+/* about social */
+
+/* about ações */
+
+.aboutAcoesPage{
+    @include flex(row);
+    height: 100%;
+    width: 100%;
+
+    .sobreCalculator{
+        @include flex(column);
+        display: none;
+        background-color: $cor-principal;
+        padding: 10px;
+        border-radius: 8px;
+
+        summary{
+            color: $cor-fundo;
+            font-size: 2.5vh;
+            user-select: none;
+        }
+
+        p{
+            background-color: $cor-fundo;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+    }
+
+    .divAboutCalculator{
+        width: 40%;
+        margin: 5%;
+
+        h1{
+            font-size: 4.5vh;
+            margin-bottom: 2%;
+
+            a{
+                color: $cor-principal;
+            }
+
+        }
+
+        p{
+            font-size: 2.5vh;
+            font-weight: 500;
+        }
+
+    }
+
+    #result{
+        margin-top: 1%
+    }
+
+    .calculator {
+        @include flex(column);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: rgb(243, 243, 243);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 75vh;
+        margin-top: 2%;
+        width: 65vh;
+
+        input{
+            margin-bottom: 10px;
+            width: 80%;
+            padding: 8px;
+            font-size: 2vh;
+            border-bottom: 1px solid rgb(199, 199, 199);
+            background-color: transparent;
+
+            &:focus{
+                border-bottom: 1px solid $cor-principal;
+            }
+
+        }
+
+        button{
+            margin-top: 10px;
+            background-color: transparent;
+            color: $cor-principal;
+            border: 1px solid $cor-principal;
+            padding: 12px;
+            font-size: 2.2vh;
+            width: 30%;
+            border-radius: 8px;
+
+            &:hover{
+                background-color: $cor-principal;
+                color: $cor-fundo;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+}
+.respostaCarbono{
+    color: $cor-principal;
+}
+
+.aboutAcoesPageCalculatorAmbiental{
+    @include flex(row);
+    height: 75%;
+    width: 100%;
+
+    .sobreCalculatorAmbiental{
+        @include flex(column);
+        display: none;
+        background-color: $cor-principal;
+        padding: 10px;
+        border-radius: 8px;
+
+        summary{
+            color: $cor-fundo;
+            font-size: 2.5vh;
+            user-select: none;
+        }
+
+        p{
+            background-color: $cor-fundo;
+            padding: 15px;
+            border-radius: 8px;
+        }
+    }
+
+    .divAboutCalculatorAmbiental{
+        width: 40%;
+        margin: 5%;
+
+        h1{
+            font-size: 4.5vh;
+            margin-bottom: 2%;
+
+            a{
+                color: $cor-principal;
+            }
+
+        }
+
+        p{
+            font-size: 2.5vh;
+            font-weight: 500;
+        }
+    }
+
+    .calculatorAmbiental{
+        @include flex(column);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: rgb(243, 243, 243);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 65vh;
+        width: 65vh;
+
+        input{
+            margin-bottom: 10px;
+            width: 80%;
+            padding: 8px;
+            font-size: 2vh;
+            border-bottom: 1px solid rgb(199, 199, 199);
+            background-color: transparent;
+
+            &:focus{
+                border-bottom: 1px solid $cor-principal;
+            }
+        }
+
+        button{
+            margin-top: 10px;
+            background-color: transparent;
+            color: $cor-principal;
+            border: 1px solid $cor-principal;
+            padding: 12px;
+            font-size: 2.2vh;
+            width: 30%;
+            border-radius: 8px;
+
+            &:hover{
+                background-color: $cor-principal;
+                color: $cor-fundo;
+                cursor: pointer;
+            } 
+        }
+
+    }
+
+}
+
+.info-box {
+    display: none;
+    width: 30%;
+    position: absolute;
+    right: -10%;
+    transform: translateX(-50%);
+    background-color: $cor-principal;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 3;
+  }
+
+  .fa-solid:hover{
+    color: $cor-principal;
+  }
+
+  .fa-solid:hover + .info-box {
+    display: block;
+  }
+
+  .info-box2 {
+    display: none;
+    width: 30%;
+    position: absolute;
+    transform: translateX(-50%);
+    background-color: $cor-principal;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 3;
+  }
+
+  .info-ativar:hover{
+    color: $cor-principal;
+  }
+
+  .info-ativar:hover + .info-box2{
+    display: block;
+  }
+  
+  
+
+/* about ações */
+
+/* about impactos */
+
+.aboutImpactosPage{
+    @include flex(row);
+    height: 100%;
+    width: 100%;
+
+    img{
+        filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.25));
+        height: auto;
+        width: 35%;
+    }
+
+    .contentImpactosAbout{
+        width: 40%;
+
+        h1{
+            font-size: 5vh;
+            margin-bottom: 2%;
+            
+            a{
+                color: $cor-principal;
+            }
+
+        }
+
+        p{
+            font-size: 2.5vh;
+            font-weight: 500;
+            margin-bottom: 2%;
+        }
+
+        .hrefCarbono{
+            color: $cor-principal;
+            text-decoration: underline
+        }
+
+    }
+
+}
+
+/* about impactos */
+
+/* about sobre */
+
+.aboutSobrePage{
+    @include flex(row);
+    height:100%;
+    width: 100%;
+
+    img{
+        height: auto;
+        width: 35%;
+        margin: 1%;
+    }
+
+    .contentSobre{
+        width: 38%;
+        margin: 1%;
+
+        h1{
+            font-size: 5vh;
+            margin-bottom: 2%;
+
+            a{
+                color: $cor-principal;
+            }
+
+        }
+
+        p{
+            font-size: 2.5vh;
+            font-weight: 500;
+            margin-bottom: 2%;
+
+            a{
+                color: $cor-principal;
+            }
+
+        }
+
+        .linkSobre{
+            color: $cor-principal;
+            text-decoration: underline;
+        }
+
+    }
+
+}
+
+.equipPage{
+    @include flex(column);
+    min-height: 100%;
+    width: 100%;
+
+    .containerEquip{
+        @include flex(row);
+        height: 40%;
+        width: 60%;
+        border-radius: 8px;
+        margin: 2%;
+        background-color: rgb(243, 243, 243);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+
+        img{
+            height: auto;
+            width: 38%;
+            margin: 2%;
+        }
+
+        .contentEquip{
+            width: 55%;
+
+            h1{
+                margin-bottom: 1%;
+                font-size: 4vh;
+                color: $cor-principal;
+            }
+
+            p{
+                font-size: 2.5vh
+            }
+
+        }
+
+    }
+
+}
+
+/* about sobre */
+
+/* footer */
+footer{
+    @include flex(column);
+    background-color: #5b8843;
+    padding: 15px;
+    border: 1px solid #405f30;
+
+    p{
+        color: rgb(46, 46, 46);
+    }
+}
+
+.secondFooter{
+    @include flex(column);
+    background-color: #eeeeee;
+    padding: 15px;
+    border: 1px solid #c7c7c7;
+
+    p{
+        color: rgb(46, 46, 46);
+    }
+}
+
+/* footer */
+
+/*responsivar*/
+@media screen and (max-width: 768px) {
+    header{
+        justify-content: space-between;
+
+        h1{
+            margin-right: 4vw;
+        }
+
+        nav{
+            display: none;
+        }
+
+        input{
+            width: 40vw;
+        }
+
+        .open-btn{
+            font-size: 5.5vw;
+            margin-left: -4vw;
+            display: flex;
+        }
+
+    }
+    main{
+        img{
+            display: none;
+        }
+        .divText{
+            width: 73vw;
+            text-align: center;
+            margin-bottom: 15%;
+        }
+    }
+    .aboutHome{
+        @include flex(column);
+
+        .containerHome{
+            width: 80vw;
+        }
+
+    }
+    .aboutRecursosPage{
+        h1{
+            text-align: center;
+        }
+        p{
+            width: 80%;
+        }
+        .btnRecursos{
+            width: 40%;
+        }
+        img{
+            height: 40%;
+            width: 80%;
+        }
+    }
+    .recursosContent{
+
+        .recursosCards{
+            height: 50%;
+            width: 85%;
+            @include flex(column);
+
+            .recursosCardsContent{
+
+                text-align: center;
+
+                h1{
+                    font-size: 2.2vh;
+                    text-align: center;
+                }
+    
+                p{
+                    font-size: 2vh;
+                    text-align: center;
+                }
+    
+                a{
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+
+            
+
+            img{
+                height: 10%;
+                width: 60%;
+            }
+
+        }
+
+    }
+
+    .socialPage{
+        @include flex(column);
+
+        img{
+            display: none;
+        }
+
+        .socialContent{
+            width: 90%;
+        }
+
+    }
+
+    .aboutAcoesPageCalculatorAmbiental{
+        @include flex(column);
+
+        .calculatorAmbiental{
+            width: 50vh;
+            display: flex;
+            margin-bottom: 3%;
+        }
+
+        .sobreCalculatorAmbiental{
+            display: flex;
+        }
+
+        .divAboutCalculatorAmbiental{
+            display: none;
+        }
+
+    }
+
+    .aboutAcoesPage{
+        @include flex(column);
+
+
+        .calculator{
+            width: 50vh;
+            display: flex;
+            margin-bottom: 3%;
+        }
+    
+        .sobreCalculator{
+            display: flex;
+        }
+
+        .divAboutCalculator{
+            display: none;
+        }
+    
+      }
+
+      .contribuirSocial{
+
+        img{
+            display: none;
+        }
+
+        .containerContribuirSocial{
+            @include flex(column);
+
+            .contentContainerContribuirSocial{
+                
+                h1{
+                    text-align: center;
+                }
+
+                p{
+                    text-align: center;
+                }
+
+            }
+
+        }
+
+      }
+
+      footer{
+        @include flex(column);
+        text-align: center
+    }
+    
+    .secondFooter{
+        @include flex(column);
+        text-align: center;
+    }
+
+    .aboutImpactosPage{
+        @include flex(column);
+
+        img{
+            display: none;
+        }
+
+        .contentImpactosAbout{
+            width: 85%;
+        }
+
+    }
+
+    .aboutSobrePage{
+
+        img{
+            display: none;
+        }
+    
+        .contentSobre{
+            width: 90%;
+        }
+    
+    
+      }
+    
+      .equipPage{
+    
+        .containerEquip{
+            width: 90%;
+    
+            img{
+                display: none;
+            }
+    
+            .contentEquip{
+                width: 90%;
+            }
+    
+        }
+    
+    }
+
+  }
+
+  
+  
+/*responsivar*/

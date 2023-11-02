@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+    <head>
+        <link rel="stylesheet" href="/assets/style/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ecco | ações</title>
+        <link rel="shortcut icon" href="/assets/img/image-removebg-preview.png" type="image/x-icon">
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="containerSidebar">
+                <a href="/index.html">Início</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/impactos.html">Impactos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/acoes.html">Ações</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/recursos.html">Recursos</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/social.html">Social</a>
+            </div>
+            <div class="containerSidebar">
+                <a href="/sobre.html">Sobre</a>
+            </div>
+        </div>
+        <header id="header">
+            <h1 onclick="window.location.href = '/index.html' ">Ecco<a>.</a></h1>
+            <nav>
+                <a href="/index.html">Início</a>
+                <a href="/impactos.html">Impactos</a>
+                <a href="/acoes.html">Ações</a>
+                <a href="/recursos.html">Recursos</a>
+                <a href="/social.html">Social</a>
+                <a href="/sobre.html">Sobre</a>
+            </nav>
+            <input type="text" placeholder="Pesquisar...">
+            <button id="btnMenu" class="open-btn" onclick="toggleSidebar()">☰</button>
+        </header>
+        <section class="aboutAcoesPage">
+            <div class="divAboutCalculator">
+               <h1>Calculadora de pegada de <a>carbono</a>.</h1>
+               <p>Uma calculadora de pegada de carbono é uma ferramenta que estima a quantidade de gases de efeito estufa emitidos por atividades humanas. Ajuda indivíduos e organizações a entender seu impacto ambiental e a adotar medidas para reduzir as emissões, combatendo as mudanças climáticas.</p>
+            </div>
+            <div class="calculator">
+                <label for="eletricidade">
+                    <p>Consumo de eletricidade (kWh por mês)</p>
+                    <input name="eletricidade" type="number" id="electricity">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div class="info-box">o consumo de eletricidade pode variar de 100 a 1.000 kWh por mês.</div>       
+                </label>
+                <br>
+                <label for="carro">
+                    <p>Km percorridos de carro por mês</p>
+                    <input name="carro" type="number" id="car">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div class="info-box">uma pessoa percorre em média entre 1,667 a 2,000 km por mês</div>
+                </label>
+                <br>
+                <label for="carne">
+                    <p>Consumo de carne por semana (em kg)</p>
+                    <input type="number" id="meat">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div class="info-box">uma pessoa consome cerca de 0,83 kg por semana.</div>
+                </label>
+                <br>
+                <label for="transporte">
+                    <p>Uso de transporte público em horas</p>
+                    <input type="number" id="publicTransport">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div class="info-box">uma pessoa pode passar em média de 1 a 2 horas no transporte público</div>
+                </label>
+                <br>
+                <div id="result"></div>
+                <button onclick="calculateCarbonFootprint()">Calcular</button>
+            </div>
+            <details class="sobreCalculator">
+                <summary>Sobre a calculadora</summary>
+                <p> ferramenta que estima e ajuda a reduzir emissões de gases de efeito estufa, combatendo as mudanças climáticas.</p>
+            </details>
+        </section>
+        <section class="aboutAcoesPageCalculatorAmbiental">
+            <div class="calculatorAmbiental">
+                <label for="agua">
+                    <p>Uso de Água (em litros)</p>
+                    <input type="number" id="aguaInput">
+                    <i class="info-ativar fa-solid fa-circle-info"></i>
+                    <div class="info-box2">Um banho de chuveiro de 10 minutos pode usar cerca de 100 a 200 litros de água</div>
+                </label>
+                <br>
+                <label for="lixo">
+                    <p>Produção de Lixo (em kg)</p>
+                    <input type="number" id="lixoInput">
+                    <i class="info-ativar fa-solid fa-circle-info"></i>
+                    <div class="info-box2">a média de produção de resíduos por pessoa pode variar entre 0,5 a 1,5 quilos.</div>
+                </label>
+                <br>
+                <label for="energia">
+                    <p>Consumo de Energia (em kWh)</p>
+                    <input type="number" id="energiaInput">
+                    <i class="info-ativar fa-solid fa-circle-info"></i>
+                    <div class="info-box2">o consumo médio de eletricidade por pessoa variar de 750 a 1.000 kWh por mês.</div>
+                </label>
+                <br>
+                <p id="resultado"></p>
+                <button onclick="calculateAmbiental()">Calcular</button>
+            </div>
+            <details class="sobreCalculatorAmbiental">
+                <summary>Sobre a calculadora ambiental</summary>
+                <p>É uma ferramenta que permite que avaliem seu impacto ambiental pessoal com atividades diárias, como o consumo de água, produção de lixo e consumo de energia.</p>
+            </details>
+            <div class="divAboutCalculatorAmbiental">
+                <h1>Calculadora <a>Ambiental</a>: O que é e por que é importante?</h1>
+                <p>É uma ferramenta que permite que avaliem seu impacto ambiental pessoal com atividades diárias, como o consumo de água, produção de lixo e consumo de energia. A ideia é conscientizar as pessoas sobre como suas escolhas e comportamentos cotidianos podem afetar o meio ambiente. Elas ajudam a entenderem melhor seu próprio impacto e a adotarem medidas para reduzi-lo.</p>
+            </div>
+        </section>
+        <footer class="secondFooter">
+            <p>&copy; 2023 Ecco. Todos os direitos reservados. Desenvolvido por Victor Henrique, Matheus Mendoza, Arthur Pecegueiro e Felipe Zimmermann.</p>
+        </footer>
+        <script src="./assets/script/script.js"></script>
+    </body>
+</html>
